@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/color_viewport"
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/color_preview"
+        android:layout_width="240dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar_opacity"
+        app:layout_constraintStart_toEndOf="@+id/color_viewport"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_opacity" />
+
+    <SeekBar
+        android:id="@+id/seekBar_red"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:max="255"
+        app:layout_constraintStart_toEndOf="@+id/color_viewport"
+        app:layout_constraintTop_toTopOf="@+id/color_viewport" />
+
+    <SeekBar
+        android:id="@+id/seekBar_green"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:max="255"
+        app:layout_constraintStart_toEndOf="@+id/color_viewport"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_red" />
+
+    <SeekBar
+        android:id="@+id/seekBar_blue"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:max="255"
+        app:layout_constraintStart_toEndOf="@+id/color_viewport"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_green" />
+
+    <SeekBar
+        android:id="@+id/seekBar_opacity"
+        style="@style/Widget.AppCompat.SeekBar"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:max="255"
+        app:layout_constraintStart_toEndOf="@+id/color_viewport"
+        app:layout_constraintTop_toBottomOf="@+id/seekBar_blue" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
